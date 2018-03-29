@@ -20,22 +20,22 @@
 	 * @see https://github.com/php-fig/log/blob/master/Psr/Log/LogLevel.php
 	 */
 	interface SyslogInterface {
-		public function emergency(string $message, array $context = []);
-		public function alert(string $message, array $context = []);
-		public function critical(string $message, array $context = []);
-		public function error(string $message, array $context = []);
-		public function warning(string $message, array $context = []);
-		public function notice(string $message, array $context = []);
-		public function info(string $message, array $context = []);
-		public function debug(string $message, array $context = []);
-		public function log(string $level, string $message, array $context = []);
+		public function emergency(string $message, array $context = []): SyslogInterface;
+		public function alert(string $message, array $context = []): SyslogInterface;
+		public function critical(string $message, array $context = []): SyslogInterface;
+		public function error(string $message, array $context = []): SyslogInterface;
+		public function warning(string $message, array $context = []): SyslogInterface;
+		public function notice(string $message, array $context = []): SyslogInterface;
+		public function info(string $message, array $context = []): SyslogInterface;
+		public function debug(string $message, array $context = []): SyslogInterface;
+		public function log(string $level, string $message, array $context = []): SyslogInterface;
 
-		public function host(string $host);
-		public function port(int $port);
-		public function facility(int $category);
-		public function date(DateTime $date);
-		public function device(string $device);
-		public function processus(string $processus);
-		public function identifier(string $identifier);
+		public function host(string $host): SyslogInterface;
+		public function port(int $port): SyslogInterface;
+		public function facility(int $category): SyslogInterface;
+		public function date(DateTime $date): SyslogInterface;
+		public function device(string $device): SyslogInterface;
+		public function processus(string $processus): SyslogInterface;
+		public function identifier(string $identifier): SyslogInterface;
 	}
 ?>
