@@ -15,7 +15,7 @@ class MyLog implements SyslogInterface {
 ```php
 $log = new MyLog;
 
-$log->warning('Request invalidated for user {userid}', ['userid' => 'John']);
+$log->warning('Request invalidated for user {userid}', ['userid' => 'John']): SyslogInterface;
 ```
 
 ## Summary
@@ -61,7 +61,7 @@ composer require khalyomede/syslog-interface:1.*
 Log a message with an alert severity level.
 
 ```php
-public function alert(string $message, array $context = []);
+public function alert(string $message, array $context = []): SyslogInterface;
 ```
 
 ### Critical
@@ -69,14 +69,14 @@ public function alert(string $message, array $context = []);
 Log a message with a critical severity level.
 
 ```php
-public function critical(string $message, array $context = []);
+public function critical(string $message, array $context = []): SyslogInterface;
 ```
 ## Date
 
 Force the date for the next log.
 
 ```php
-public function date(DateTime $date);
+public function date(DateTime $date): SyslogInterface;
 ```
 
 ## debug
@@ -84,7 +84,7 @@ public function date(DateTime $date);
 Log a message with a debug severity log.
 
 ```php
-public function debug(string $message, array $context = []);
+public function debug(string $message, array $context = []): SyslogInterface;
 ```
 
 ## device
@@ -92,7 +92,7 @@ public function debug(string $message, array $context = []);
 Set the originated device (mobile device, webcam, web server, ...) that generated the log.
 
 ```php
-public function device(string $device);
+public function device(string $device): SyslogInterface;
 ```
 
 ## emergency
@@ -100,7 +100,7 @@ public function device(string $device);
 Log a message with an emergency severity level.
 
 ```php
-public function emergency(string $message, array $context = []);
+public function emergency(string $message, array $context = []): SyslogInterface;
 ```
 
 ## error
@@ -108,7 +108,7 @@ public function emergency(string $message, array $context = []);
 Log a messae with an error severity level.
 
 ```php
-public function error(string $message, array $context = []);
+public function error(string $message, array $context = []): SyslogInterface;
 ```
 
 ## facility
@@ -116,7 +116,7 @@ public function error(string $message, array $context = []);
 Represents the origin process. For a list of common facilities, follow [this link](https://tools.ietf.org/html/rfc5424#section-6.2.1).
 
 ```php
-public function facility(int $category);
+public function facility(int $category): SyslogInterface;
 ```
 
 ## host
@@ -124,7 +124,7 @@ public function facility(int $category);
 Represents the machine that will receive the log. 
 
 ```php
-public function host(string $host);
+public function host(string $host): SyslogInterface;
 ```
 
 ## identifier
@@ -132,7 +132,7 @@ public function host(string $host);
 An identifier (can be a string or an integer) that represents the serie of logs.
 
 ```php
-public function identifier(string $identifier);
+public function identifier(string $identifier): SyslogInterface;
 ```
 
 ## info
@@ -140,7 +140,7 @@ public function identifier(string $identifier);
 Log a message with an info severity level.
 
 ```php
-public function info(string $message, array $context = []);
+public function info(string $message, array $context = []): SyslogInterface;
 ```
 
 ## log
@@ -148,7 +148,7 @@ public function info(string $message, array $context = []);
 Log the message.
 
 ```php
-public function log(string $level, string $message, array $context = []);
+public function log(string $level, string $message, array $context = []): SyslogInterface;
 ```
 
 ## notice
@@ -156,7 +156,7 @@ public function log(string $level, string $message, array $context = []);
 Log a message with a notice severity level.
 
 ```php
-public function notice(string $message, array $context = []);
+public function notice(string $message, array $context = []): SyslogInterface;
 ```
 
 ## port
@@ -164,7 +164,7 @@ public function notice(string $message, array $context = []);
 Set the port to log through.
 
 ```php
-public function port(int $port);
+public function port(int $port): SyslogInterface;
 ```
 
 ## processus
@@ -172,7 +172,7 @@ public function port(int $port);
 Set the originated machine, device, ... that is responsible for generating the log.
 
 ```php
-public function processus(string $processus);
+public function processus(string $processus): SyslogInterface;
 ```
 
 ## warning
@@ -180,7 +180,7 @@ public function processus(string $processus);
 Log a message with a warning severity level.
 
 ```php
-public function warning(string $message, array $context = []);
+public function warning(string $message, array $context = []): SyslogInterface;
 ```
 
 ## MIT Licence
