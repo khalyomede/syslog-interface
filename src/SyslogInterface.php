@@ -13,14 +13,13 @@
 
 	namespace Khalyomede;
 
-	use Psr\Log\LoggerInterface;
 	use DateTime;
 
 	/**
 	 * @see https://github.com/php-fig/log/blob/master/Psr/Log/LoggerInterface.php
 	 * @see https://github.com/php-fig/log/blob/master/Psr/Log/LogLevel.php
 	 */
-	interface SyslogInterface extends LoggerInterface {
+	interface SyslogInterface {
 		public function emergency(string $message, array $context = []);
 		public function alert(string $message, array $context = []);
 		public function critical(string $message, array $context = []);
