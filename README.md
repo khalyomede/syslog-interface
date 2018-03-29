@@ -1,16 +1,41 @@
 # Syslog interface
 
+![PHP from Packagist](https://img.shields.io/packagist/php-v/khalyomede/syslog-interface.svg)
+![Packagist](https://img.shields.io/packagist/v/khalyomede/syslog-interface.svg)
+![Packagist](https://img.shields.io/packagist/l/khalyomede/syslog-interface.svg)
+
 Standard proposal for Syslog protocol across any classes.
+
+```php
+class MyLog implements SyslogInterface {
+	// ...
+}
+```
+
+```php
+$log = new MyLog;
+
+$log->warning('User {userid} request invalidated on field "{fieldname}"', ['userid' => 'John', 'fieldname' => 'slug']);
+```
 
 ## Summary
 
 - [Problem solved with this standard](#problem-solved-with-this-standard)
+- [Installation](#installation)
 - [Methods definitions](#methods-definitions)
 - [MIT Licence](#mit-licence)
 
 ## Problem solved with this standard
 
 This interface aim to bring a common strategy for various implementer of syslog solutions. It is based on [PSR-3 Log standard](https://www.php-fig.org/psr/psr-3/) (but does not implement its interface because of the lack of support for type hinting in method prototypes) and provide a overlay to it by following the [Syslog Protocol RFC 5424](https://tools.ietf.org/html/rfc5424).
+
+## Installation
+
+In your project folder:
+
+```bash
+composer require khalyomede/syslog-interface:1.*
+```
 
 ## Methods definitions
 
