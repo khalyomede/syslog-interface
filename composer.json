@@ -1,0 +1,28 @@
+{
+    "name": "khalyomede/syslog-interface",
+    "description": "Standard proposal for Syslog protocol across any classes",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khalyomede",
+            "email": "khalyomede@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0.0",
+        "psr/log": "1.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Khalyomede\\": "src"
+        }
+    },
+    "require-dev": {
+        "phpspec/phpspec": "4.*"
+    }
+}
