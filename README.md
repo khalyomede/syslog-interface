@@ -8,14 +8,14 @@ Standard proposal for Syslog protocol across any classes.
 
 ```php
 class MyLog implements SyslogInterface {
-	// ...
+  // ...
 }
 ```
 
 ```php
 $log = new MyLog;
 
-$log->warning('User {userid} request invalidated on field "{fieldname}"', ['userid' => 'John', 'fieldname' => 'slug']);
+$log->warning('Request invalidated for user {userid}', ['userid' => 'John']);
 ```
 
 ## Summary
