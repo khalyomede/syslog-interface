@@ -5,15 +5,12 @@ Standard proposal for Syslog protocol across any classes.
 ## Summary
 
 - [Problem solved with this standard](#problem-solved-with-this-standard)
-- [Examples of uses](#examples-of-uses)
 - [Methods definitions](#methods-definitions)
 - [MIT Licence](#mit-licence)
 
 ## Problem solved with this standard
 
-This interface aim to bring a common strategy for various implementer of syslog solutions. It is based on [PSR-3 Log standard](https://www.php-fig.org/psr/psr-3/) and provide a overlay to it by following the [Syslog Protocol RFC 5424](https://tools.ietf.org/html/rfc5424).
-
-## Examples of uses
+This interface aim to bring a common strategy for various implementer of syslog solutions. It is based on [PSR-3 Log standard](https://www.php-fig.org/psr/psr-3/) (but does not implement its interface because of the lack of support for type hinting in method prototypes) and provide a overlay to it by following the [Syslog Protocol RFC 5424](https://tools.ietf.org/html/rfc5424).
 
 ## Methods definitions
 
@@ -78,89 +75,88 @@ public function device(string $device);
 Log a message with an emergency severity level.
 
 ```php
-
+public function emergency(string $message, array $context = []);
 ```
 
 ## error
 
-
+Log a messae with an error severity level.
 
 ```php
-
+public function error(string $message, array $context = []);
 ```
 
 ## facility
 
-
+Represents the origin process. For a list of common facilities, follow [this link](https://tools.ietf.org/html/rfc5424#section-6.2.1).
 
 ```php
-
+public function facility(int $category);
 ```
 
 ## host
 
-
+Represents the machine that will receive the log. 
 
 ```php
-
+public function host(string $host);
 ```
 
 ## identifier
 
-
+An identifier (can be a string or an integer) that represents the serie of logs.
 
 ```php
-
+public function identifier(string $identifier);
 ```
 
 ## info
 
-
+Log a message with an info severity level.
 
 ```php
-
+public function info(string $message, array $context = []);
 ```
 
 ## log
 
-
+Log the message.
 
 ```php
-
+public function log(string $level, string $message, array $context = []);
 ```
 
 ## notice
 
-
+Log a message with a notice severity level.
 
 ```php
-
+public function notice(string $message, array $context = []);
 ```
 
 ## port
 
-
+Set the port to log through.
 
 ```php
-
+public function port(int $port);
 ```
 
 ## processus
 
-
+Set the originated machine, device, ... that is responsible for generating the log.
 
 ```php
-
+public function processus(string $processus);
 ```
 
 ## warning
 
-
+Log a message with a warning severity level.
 
 ```php
-
+public function warning(string $message, array $context = []);
 ```
-
 
 ## MIT Licence
 
