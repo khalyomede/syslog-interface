@@ -59,7 +59,7 @@ public function date(DateTime $date);
 
 ## debug
 
-Log a message with a debyg severity log.
+Log a message with a debug severity log.
 
 ```php
 public function debug(string $message, array $context = []);
