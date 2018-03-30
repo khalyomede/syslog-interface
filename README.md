@@ -54,6 +54,7 @@ composer require khalyomede/syslog-interface:1.*
 - [`notice`](#notice)
 - [`port`](#port)
 - [`processus`](#processus)
+- [`source`](#source)
 - [`warning`](#warning)
 
 ### Alert
@@ -174,6 +175,19 @@ Set the originated machine, device, ... that is responsible for generating the l
 ```php
 public function processus(string $processus);
 ```
+
+## source
+
+Set the originated domain that host the device. For more information check the [hostname property RFC5424](https://tools.ietf.org/html/rfc5424#section-6.2.4).
+
+```php
+public function source(string $source);
+```
+
+**Note**
+
+- The source should be a valid domain or ip
+- The validation should be made via [`filter_var`](http://php.net/manual/en/function.filter-var.php) and prefix by `http://` if it is missing
 
 ## warning
 
