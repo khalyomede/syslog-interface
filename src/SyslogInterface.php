@@ -32,7 +32,7 @@
 		public function host(string $host);
 		public function source(string $source);
 		public function port(int $port);
-		public function facility(int $category);
+		public function facility(int $facility);
 		public function date(DateTime $date);
 		public function device(string $device);
 		public function processus(string $processus);
