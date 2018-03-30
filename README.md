@@ -22,6 +22,7 @@ $log->warning('Request invalidated for user {userid}', ['userid' => 'John']);
 
 - [Problem solved with this standard](#problem-solved-with-this-standard)
 - [Installation](#installation)
+- [Warnings](#warnings)
 - [Methods definitions](#methods-definitions)
 - [MIT Licence](#mit-licence)
 
@@ -36,6 +37,10 @@ In your project folder:
 ```bash
 composer require khalyomede/syslog-interface:1.*
 ```
+
+## Warnings
+
+- No support for the [structured data](https://tools.ietf.org/html/rfc5424#section-7) for the moment
 
 ## Methods definitions
 
