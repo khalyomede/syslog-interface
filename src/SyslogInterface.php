@@ -30,6 +30,7 @@
 		public function debug(string $message, array $context = []);
 		public function log(string $level, string $message, array $context = []);
 		public function host(string $host);
+		public function source(string $source);
 		public function port(int $port);
 		public function facility(int $category);
 		public function date(DateTime $date);
